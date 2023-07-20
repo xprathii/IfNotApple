@@ -93,7 +93,7 @@ function Layout({ children }) {
                         {!collapsed ? (<i className="ri-close-fill header-action-icon" onClick={() => setCollapsed(true)}></i>) : (<i className="ri-menu-2-fill header-action-icon" onClick={() => setCollapsed(false)}></i>)}
 
                         <div className='d-flex align-items-center px-4'>
-                            <i className="ri-notification-2-line px-3" header-action-icon></i>
+                            <i className="ri-notification-2-line px-3 header-action-icon"></i>
                             <Link className="anchor" to='/profile'>{user?.name}</Link>
                         </div>
                     </div>

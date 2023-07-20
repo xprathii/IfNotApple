@@ -9,11 +9,13 @@ input{
   border: 1px solid rgba(128, 128, 128, 0.533) !important;
   height: 40px !important;
 }
-input.focus{
+
+input:focus, .ant-picker{
   outline: none !important;
   box-shadow: none !important;
-  border: 1px !important;
+  border: 1px solid grey !important;
 }
+
 label{
   font-size: 16px !important;
   color: black !important;
@@ -21,7 +23,14 @@ label{
 .ant-form-item{
   margin: 10px 0 !important;
 }
-
+.ant-picker-input input{
+  border: none !important;
+}
+.ant-picker{
+  border-radius: 0 !important;
+  border: 1px solid rgba(128, 128, 128, 0.533) !important;
+  height: 40px !important;
+}
 /* Common Styling */
 .spinner-parent{
   display: flex;
@@ -40,9 +49,15 @@ label{
   height: 5rem;
   color: white !important;
 }
-.card-title{
-  font-size: 1.5rem;
+.page-title{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.792);
   font-weight: bold;
+}
+.card-title{
+  font-size: 22px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.495);
 }
 .normal-text{
   font-size: 1rem;
@@ -56,6 +71,14 @@ label{
   border-color: #005555 !important;
   height: 40px !important;
   width: 100% !important;
+  color: white !important;
+  font-size: 16px !important;
+}
+.doctor-primary-button{
+  background-color: #005555 !important;
+  border-color: #005555 !important;
+  height: 40px !important;
+  width: max-content !important;
   color: white !important;
   font-size: 16px !important;
 }
