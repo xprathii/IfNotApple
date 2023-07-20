@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import ProtectedRoute from './components/ProtectedRoute';
 import PublicRoute from './components/PublicRoute';
 import ApplyDoctor from './pages/ApplyDoctor';
+import Notifications from './pages/Notifications';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/register' element={<PublicRoute><Register /></PublicRoute>}/>
           <Route path='/' element={<ProtectedRoute><Home /></ProtectedRoute>}/>
           <Route path='/apply-doctor' element={<ProtectedRoute><ApplyDoctor /></ProtectedRoute>}/>
+          <Route path='/notifiactions' element={<ProtectedRoute><Notifications /></ProtectedRoute>}/>
 
 
       </Routes>
