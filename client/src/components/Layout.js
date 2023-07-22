@@ -56,7 +56,26 @@ function Layout({ children }) {
     },
   ];
 
-  const menuToBeRendered = user?.isAdmin ? adminMenu : userMenu;
+  const doctorMenu = [
+    {
+      name: 'Home',
+      path: '/',
+      icon: 'ri-home-2-line',
+    },
+    {
+      name: 'Appointments',
+      path: '/appointments',
+      icon: 'ri-file-list-3-line',
+    },
+    {
+      name: 'Profile',
+      path: `doctor/profile/${user?._id}`,
+      icon: 'ri-file-user-line',
+    },
+  ];
+
+  const menuToBeRendered = user?.isAdmin ? adminMenu :user?.isDoctor ? doctorMenu : userMenu;
+  const role = user?.isAdmin ? "Admin" :user?.isDoctor ? "Doctor" : "User";
 
   return (
     <div className="main">
@@ -64,6 +83,7 @@ function Layout({ children }) {
         <div className="sidebar">
           <div className="sidebar-header">
             <h1 className="logo">INA</h1>
+            <h1 className='role'>{role}</h1>
           </div>
 
           <div className="menu">
