@@ -14,6 +14,7 @@ import Notifications from './pages/Notifications';
 import Userslist from './pages/Admin/Userslist';
 import DoctorsList from './pages/Admin/DoctorsList';
 import Profile from './pages/Doctor/Profile';
+import BookAppointment from './pages/BookAppointment'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path='/admin/Userslist' element={<ProtectedRoute><Userslist /></ProtectedRoute>} />
         <Route path='/admin/DoctorsList' element={<ProtectedRoute><DoctorsList /></ProtectedRoute>} />
         <Route path='/doctor/profile/:userId' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path='/book-appointment/:doctorId' element={<ProtectedRoute><BookAppointment /></ProtectedRoute>} />
 
 
       </Routes>

@@ -63,7 +63,7 @@ label{
   font-size: 1rem;
 }
 .card{
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 2px rgb(147, 147, 147);
   border-radius: 0 !important;
 }
 .primary-button{
@@ -82,6 +82,12 @@ label{
   color: white !important;
   font-size: 16px !important;
 }
+
+p{
+  color: rgba(0, 0, 0, 0.689) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .anchor{
   color: black !important;
   text-decoration: underline !important;
@@ -92,6 +98,9 @@ label{
   text-decoration: underline !important;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
 /* authentication pages */
 .authentication{
   height: 100vh;

@@ -40,7 +40,7 @@ const doctorSchema=new mongoose.Schema(
         },
         timings:{
             type: Array,
-            required: true
+            required: true,
         },
         status:{
             type: String,
