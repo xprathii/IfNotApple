@@ -74,6 +74,7 @@ function BookAppointment() {
   };
 
   const bookNow = async () => {
+    setIsAvailable(false);
     try {
       dispatch(showLoading());
       const response = await axios.post(
@@ -117,9 +118,14 @@ function BookAppointment() {
               <h1 className="normal-text"><b>Timings : </b> {doctor.timings[0]} - {doctor.timings[1]}</h1>
 
               <div className="d-flex flex-column pt-2">
-                <DatePicker format='DD-MM-YYYY' onChange={(value) => setDate(moment(value).format('DD-MM-YYYY'))} />
+                <DatePicker format='DD-MM-YYYY' onChange={(value) =>{
+                setDate(moment(value).format('DD-MM-YYYY'))
+                setIsAvailable(false);
+                }
+                } />
                 <TimePicker format='HH:mm' className="mt-3"
                   onChange={(value) => {
+                    setIsAvailable(false)
                     setTime(
                       moment(value).format('HH:mm'),
                     )
@@ -127,7 +133,7 @@ function BookAppointment() {
                 />
 
                 <Button className="primary-button mt-3" onClick={checkAvailability}>Check Availability</Button>
-                <Button className="primary-button mt-3" onClick={bookNow}>Book Now</Button>
+                {isAvailable && (<Button className="primary-button mt-3" onClick={bookNow}>Book Now</Button>)}
               </div>
             </Col>
           </Row>

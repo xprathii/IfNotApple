@@ -62,7 +62,13 @@ function DoctorForm({onFinish , initialValues}) {
                         </Form.Item>
                     </Col>
                     <Col span={8} xs={24} sm={24} lg={8}>
-                        <Form.Item label='Timings' name='timings' rules={[{required:true}]}>
+                    <Form.Item
+                            required
+                            label="Timings"
+                            name="timings"
+                            rules={[{ required: true }]}
+                        >
+
                             <TimePicker.RangePicker format='HH:mm'/>
                         </Form.Item>
                     </Col>

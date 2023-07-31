@@ -35,7 +35,6 @@ router.post('/register', async(req, res)=>{
         .send({message: "Error creating user", success: false, error})
     }
 })
-
 router.post('/login', async(req, res)=>{
     try{
         const user = await User.findOne({ email: req.body.email});
@@ -64,7 +63,6 @@ router.post('/login', async(req, res)=>{
             .send({ message: "Error Logging In",success: false,error});
     }
 });
-
 router.post('/get-user-info-by-id',authMiddleware,async(req,res)=>{
     try {
         const user = await User.findOne({ _id: req.body.userId});
@@ -85,7 +83,6 @@ router.post('/get-user-info-by-id',authMiddleware,async(req,res)=>{
             .send({ message: "Error getting User Info", success: false, error});
     }
 });
-
 router.post('/apply-doctor-account', authMiddleware, async(req, res)=>{
     try{
         const newdoctor=new Doctor({...req.body, status:'pending'});
@@ -207,7 +204,7 @@ router.post("/check-booking-avilability", authMiddleware, async (req, res) => {
       const fromTime = moment(req.body.time, "HH:mm")
         .subtract(1, "hours")
         .toISOString();
-      const toTime = moment(req.body.time, "HH:mm").add(1, "hours").toISOString();
+      const toTime = moment(req.body.time).add(1, "hours").toISOString();
       const doctorId = req.body.doctorId;
       const appointments = await Appointment.find({
         doctorId,
