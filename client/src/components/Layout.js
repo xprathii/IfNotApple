@@ -64,7 +64,7 @@ function Layout({ children }) {
     },
     {
       name: 'Appointments',
-      path: '/appointments',
+      path: '/doctor/appointments',
       icon: 'ri-file-list-3-line',
     },
     {
