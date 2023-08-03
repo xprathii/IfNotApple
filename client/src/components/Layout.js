@@ -26,11 +26,6 @@ function Layout({ children }) {
       path: '/apply-doctor',
       icon: 'ri-hospital-line',
     },
-    {
-      name: 'Profile',
-      path: '/profile',
-      icon: 'ri-file-user-line',
-    },
   ];
 
   const adminMenu = [
