@@ -55,7 +55,7 @@ router.post(
       unseenNotifications.push({
         type: "new-doctor-request-changed",
         message: `Your doctor account has been ${status}`,
-        onClickPath: "/notifiactions",
+        onClickPath: "/notifications",
       });
       user.isDoctor = status === "approved" ? true : false;
       await user.save();
